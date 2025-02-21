@@ -25,6 +25,21 @@ public class Main {
 
         // Ora possiamo stampare l'output successivamente
         System.out.println(output);
+        
+        
+        double d1, d2, product;
+        
+        System.out.println("Digita un numero in virgola mobile!");
+        s1 = input.nextLine();
+        d1 = Double.parseDouble(s1);
+        
+        System.out.println("Digita un secondo numero in virgola mobile!");
+        s1 = input.nextLine();
+        d2 = Double.parseDouble(s1);
+        
+        product = d1 * d2;
+        output = String.format("Il prodotto tra %f e %f è %f", d1, d2, product);
+        System.out.println(output);
 
         input.close(); // È buona pratica chiudere lo Scanner quando non serve più
     }
