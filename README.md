@@ -117,25 +117,20 @@ Ad ogni operatore verrà associata una variabile x per capire come vanno utilizz
 
 Nell'esempio sotto, partiamo con una variabile `int x = 1`.
 
-![[java-operators-1.png]]
 
 - Quando il compilatore troverà gli operatori "pre", effettuerà gli incrementi o decrementi per poi stampare il valore della variabile.
 - Quando il compilatore troverà gli operatori "post" invece, stamperà prima il valore di x attuale e solo successivamente lo modificherà.
-
-![[java-operators-2.png]]
 
 
 ## Positivo unario
 
 - + : L'operatore positivo unario non modifica il valore della variabile, ma può essere utilizzato per enfatizzare che un numero è positivo.
 
-![[java-operators-3.png]]
 
 ## Negativo unario
 
 - - : L'operatore negativo unario cambia il segno di un numero in negativo.
 
-![[java-operators-4.png]]
 
 NB: esistono anche gli operatori logici not ! e bitwise not ~ che sono operatori unari, ma verranno trattati nelle categorie appartenenti.
 
@@ -155,7 +150,6 @@ Questi operatori possono essere utilizzati con vari tipi di dati, compresi int, 
 - / (Divisione): Questo operatore viene utilizzato per dividere un valore per un altro. Se entrambi gli operandi sono interi, il risultato sarà la divisione intera. Per ottenere un risultato con decimali, uno o entrambi gli operandi devono essere numeri a virgola mobile (float o double).
 - % (Modulo): Questo operatore viene utilizzato per ottenere il resto di una divisione.
 
-![[java-operators-5.png]]
 
 ---
 
@@ -165,15 +159,13 @@ Gli operatori **shift** in Java sono utilizzati per lavorare a basso livello, sp
 
 - Shift a sinistra <<: L'operatore di shift a sinistra sposta i bit del numero verso sinistra. Ogni spostamento a sinistra raddoppia il numero. In questo esempio, stiamo spostando i bit di a di una posizione a sinistra. Questo ha l'effetto di raddoppiare il valore di a.
 
-![[java-operators-6.png]]
 
 - Shift a destra con segno >>: L'operatore di shift a destra con segno sposta i bit del numero verso destra, mantenendo il segno (positivo o negativo) del numero. Ogni spostamento a destra dimezza il numero. In questo esempio, stiamo spostando i bit di a di una posizione a destra. Questo ha l'effetto di dimezzare il valore di a.
 
-![[java-operators-7.png]]
 
 - Shift a destra senza segno >>>: L'operatore di shift a destra senza segno funziona come l'operatore di shift a destra con segno, ma riempie gli spazi vuoti con zeri indipendentemente dal segno del numero. Questo operatore è rilevante solo per i numeri negativi. In questo esempio, stiamo spostando i bit di a di una posizione a destra. Poiché a è un numero negativo, l'operatore >>> riempie lo spazio vuoto con uno zero, cambiando il segno del numero.
 
-![[java-operators-8.png]]
+
 
 NB: gli operatori di shift lavorano a livello di bit, quindi i loro effetti possono non essere immediatamente intuitivi se non siamo abituati a lavorare con la rappresentazione binaria dei numeri.
 
@@ -184,8 +176,6 @@ NB: gli operatori di shift lavorano a livello di bit, quindi i loro effetti poss
 Gli operatori relazionali (detti anche di confronto) in Java sono utilizzati per confrontare due valori. Il risultato di ogni confronto sarà sempre un valore booleano: true, se il confronto è vero; false, se il confronto è falso.
 
 Vediamo degli esempi:
-
-![[java-operators-9.png]]
 
 Questi operatori di confronto sono molto utili nei costrutti ciclici e condizionali (che vedremo in seguito), dove è necessario confrontare due valori per decidere quale percorso di esecuzione seguire.
 
@@ -202,7 +192,7 @@ Questi operatori di confronto sono molto utili nei costrutti ciclici e condizion
 
 Gli operatori bitwise in Java operano sui bit di un numero. Gli operatori bitwise operano a livello di bit, quindi possono avere effetti non immediatamente intuitivi se non siamo abituati a lavorare con la rappresentazione binaria dei numeri. Sono usati principalmente per operazioni a basso livello, come la manipolazione diretta di bit o l'ottimizzazione delle prestazioni.
 
-![[java-operators-10.png]]
+
 
 - Bitwise AND & : Questo operatore restituisce 1 se entrambi i bit corrispondenti sono 1, altrimenti restituisce 0. In questo esempio, a & b restituisce 1 perché solo l'ultimo bit in a e b sono entrambi 1.
 
@@ -222,7 +212,7 @@ Gli operatori logici sono utilizzati per creare espressioni booleane che possono
 
 Gli operatori logici seguono la tabella algebrica di Boole.
 
-![[java-operators-11.png]]
+
 
 - Logical AND && : Questo operatore restituisce true solo se entrambi gli operandi sono true. In tutte le altre combinazioni, il valore ritornato sarà false.
 
@@ -238,7 +228,7 @@ Nell'espressione a && b, se a è false, allora l'intera espressione sarà false,
 
 Questo può essere utile per prevenire errori, come la divisione per zero o il riferimento a null, nel secondo operando.
 
-![[java-operators-12.png]]
+
 
 In questo esempio, l'espressione 10 / 0 causerebbe un errore di divisione per zero. Tuttavia, a causa della valutazione short-circuit, l'espressione 10 / 0 non viene mai valutata, a causa del primo operando 0 != 0 è false, quindi l'errore è evitato.
 
@@ -250,12 +240,11 @@ Gli operatori di assegnamento sono utilizzati per assegnare un valore a una vari
 
 Esistono anche altri operatori di assegnamento che eseguono un'operazione algebrica sul valore corrente della variabile prima di assegnarle il risultato. Ecco un elenco di tutti gli operatori di assegnamento in Java.
 
-![[java-operators-13.png]]
 
 - = : Assegna il valore alla sua destra alla variabile alla sua sinistra.
 - += : Aggiunge il valore alla sua destra al valore corrente della variabile e assegna il risultato alla variabile.
 - -= : Sottrae il valore alla sua destra dal valore corrente della variabile e assegna il risultato alla variabile.
-- `*=` : Moltiplica il valore corrente della variabile per il valore alla sua destra e assegna il risultato alla variabile.
+- *= : Moltiplica il valore corrente della variabile per il valore alla sua destra e assegna il risultato alla variabile.
 - /= : Divide il valore corrente della variabile per il valore alla sua destra e assegna il risultato alla variabile.
 - %= : Calcola il modulo del valore corrente della variabile per il valore alla sua destra e assegna il risultato alla variabile.
 
@@ -264,8 +253,6 @@ PS: Gli operatori di assegnamento combinati sono un modo comodo e compatto per m
 ## Assegnamento e bitwise
 
 Ci sono anche operatori di assegnamento bitwise funzionano allo stesso modo degli operatori di assegnamento aritmetici, ma eseguono operazioni bitwise invece di operazioni aritmetiche.
-
-![[java-operators-14.png]]+
 
 - &= : Esegue un AND bitwise sul valore corrente della variabile e il valore alla sua destra e assegna il risultato alla variabile.
 - |= : Esegue un OR bitwise sul valore corrente della variabile e il valore alla sua destra e assegna il risultato alla variabile.
@@ -404,10 +391,6 @@ public class Operatori {
 
 
 ---
-
-# Codice lezione
-
-[https://github.com/Ruma303/java-operators](https://github.com/Ruma303/java-operators)
 
 # Esercitazione
 
